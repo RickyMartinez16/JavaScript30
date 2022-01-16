@@ -60,8 +60,8 @@
 <script>
 
   function playSound (event) {
-    const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
-    const key = document.querySelector(`.key[data-key="${event.keyCode}"]`);
+    const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`); //find the audio
+    const key = document.querySelector(`.key[data-key="${event.keyCode}"]`); //find the keycode
     if(!audio) return; // stops the function from running if doesnt match a letter
     audio.currentTime = 0; // rewinds to the start of the sound
     audio.play(); // plays the sound
